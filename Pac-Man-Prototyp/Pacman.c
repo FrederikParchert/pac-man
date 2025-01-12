@@ -1,5 +1,5 @@
-#include <stdio.h> // Test Nachricht
-#include <stdlib.h>  sfsdhfsalfhjsahfsajhf
+#include <stdio.h>
+#include <stdlib.h> 
 #include <conio.h> // Für getch() und kbhit() (nur auf Windows verfügbar)
 #include <stdbool.h>
 #include <time.h>
