@@ -130,7 +130,8 @@ void initializeGrid()
 }
 
 // Spielfeld anzeigen
-void drawGrid() {
+void drawGrid() 
+{
     COORD cursorPosition = {0, 0};
     HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleCursorPosition(console, cursorPosition); // Cursor zurücksetzen
@@ -305,7 +306,8 @@ void loadHighscores(HighscoreEntry highscores[])
 void saveHighscores(HighscoreEntry highscores[]) 
 {
     FILE *file = fopen(HIGHSCORE_FILE, "w");
-    if (file) {
+    if (file) 
+    {
         for (int i = 0; i < HIGHSCORE_COUNT; i++) 
         {
             if (highscores[i].name[0] != '\0') 
