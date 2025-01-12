@@ -3,7 +3,7 @@
 #include <conio.h> // Für getch() und kbhit() (nur auf Windows verfügbar)
 #include <stdbool.h>
 #include <time.h>
-#include <windows.h> // Für Sleep()
+#include <windows.h> 
 
 #define WIDTH 38
 #define HEIGHT 12
@@ -31,7 +31,7 @@ char ghost_prev_char[MAX_GHOSTS]; // Speichert, was unter jedem Geist war
 int score = 0;
 bool running = true;
 
-// Neue Variablen für Leben, Geisterkontakte und Level
+// Variablen für Leben, Geisterkontakte und Level
 int lives = 3; 
 int ghostContactCount = 0;
 int level = 1;
@@ -59,23 +59,22 @@ void initializeGrid()
         "######################################"
     };
 
-    // Spielfeld für Level 2, 3, etc. kann hier angepasst werden
+    // Spielfeld für Level 2
     if (level == 2) 
     {
-        // Beispiel für ein anderes Layout im 2. Level
         char level2[HEIGHT][WIDTH] = 
         {
             "######################################",
-            "#.....##.....#########.......#...#####",
-            "#..##....#....#....#.....###.........#",
-            "#......##..#..##..............#...#..#",
-            "#...####...#......###..####...#..##..#",
-            "#....#....#...##...P......#..........#",
-            "#######...#....#.....##..###..####..##",
+            "#.....##..............#..........#####",
+            "#..##....#...#######.....###.........#",
+            "#......##..#..##.....#........#...#..#",
+            "###.####...#.....##....####...#..##..#",
+            "#.........#...##...P##...............#",
+            "#..####...#....#.....##..###..####..##",
             "#..##...#####....###....####..##.....#",
-            "#...........#.............##........##",
-            "#....####...#......###..........##...#",
-            "#....#...........#####...######......#",
+            "#....##.....#.............##........##",
+            "#....####...#......###..####....##...#",
+            "#..#......####...........######......#",
             "######################################"
         };
         for (int i = 0; i < HEIGHT; i++) 
