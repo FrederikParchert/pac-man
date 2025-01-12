@@ -302,7 +302,7 @@ int main()
             break;
         }
 
-        Sleep(100); // Flüssigere Darstellung mit kürzeren Pausen
+        Sleep(100); // Spielgeschwindigkeit
     }
 
     // Highscore aktualisieren
